@@ -1,17 +1,24 @@
 .card {
-  background: #ffffff;
+  background:rgb(244, 241, 247);
   padding: 20px;
+  border: 1px solid #ddd6fe;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.card-title {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: 600;
+h2 {
+  color: #4c1d95;
 }
 
-.card-body {
-  font-size: 14px;
-  color: #444;
+button {
+  background: #c4b5fd;
+  padding: 10px 20px;
+  border: 1px solid #c4b5fd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a78bfa;
+  border-color: #a78bfa;
 }

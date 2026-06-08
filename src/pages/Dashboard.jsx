@@ -1,24 +1,27 @@
-import useFetch from "../hooks/useFetch";
-import Card from "../components/Card";
+import { useState } from "react";
+import { robots } from "../data/robots";
+import RobotCard from "../components/RobotCard";
+import RobotDetails from "../components/RobotDetails";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
-  const { data, loading, error } = useFetch(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
-
-  if (loading) return <p>Is loading ... </p>;
-  if (error) return <p>Error: {error}</p>;
-  if (!data) return null;
-
-  const firstFour = data.slice(0, 4);
-
+  const [selectedRobot, setSelectedRobot] = useState(null)
   return (
-    <div className="dashboard-grid">
-      {firstFour.map((item) => (
-        <Card key={item.id} title={item.title} body={item.body} />
-      ))}
-    </div>
+    <>
+      <div className="dashboard-grid">
+        {robots.map((robot) => (
+          <RobotCard 
+            key={robot.id} 
+            robot={robot}
+            onSelect={setSelectedRobot} />
+        ))}
+      </div>
+
+      {selectedRobot && (
+        <RobotDetails robot={selectedRobot} />
+      )}
+    </>
+
   );
 };
 

@@ -1,0 +1,42 @@
+.page-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4c1d95;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  
+  .stat-card {
+    background: rgb(244, 241, 247);
+    border: 1px solid #ddd6fe;
+    border-radius: 14px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(76, 29, 149, 0.08);
+  }
+  
+  .label {
+    font-size: 13px;
+    color: #6b21a8;
+    font-weight: bold;
+  }
+  
+  .value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4c1d95;
+    margin-top: 6px;
+  }
+  
+  .online { color: #16a34a; }
+  .offline { color: #dc2626; }
+  .charging { color: #d97706; }
+  
+  .highlight {
+    background: #ddd6fe;
+  }
