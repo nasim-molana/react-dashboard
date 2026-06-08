@@ -1,7 +1,7 @@
 
-# **React Dashboard — (JavaScript Version)**
+# ** Robot Fleet Dashboard — React**
 
-A simple and clean dashboard built with **React**, **Custom Hooks**, **Routing**, and a fully responsive UI. The dashboard fetches real API data and displays it using reusable components.
+A simple and clean dashboard built with **React**, **Custom Hooks**, **Routing**, and a fully responsive UI. A robotics-oriented fleet dashboard built with React. The project demonstrates component architecture, custom hooks, context API, routing, shared state management, and reusable UI patterns commonly used in enterprise applications.
 
 ---
 
@@ -9,23 +9,36 @@ A simple and clean dashboard built with **React**, **Custom Hooks**, **Routing**
 👉 **https://dashboard-nu-jade-21.vercel.app/**
 
 ---
+## **🎯 Architecture Highlights**
+
+- Smart and Presentational Component separation
+- Context API for shared dashboard settings
+- Custom Hooks for reusable business logic
+- Component composition
+- React Router based navigation
+- State lifting and controlled data flow
+
+---
 
 ## 📌 **Features**
-- Fully responsive dashboard layout (mobile → tablet → desktop)
-- Sidebar navigation with **active highlight state**
-- Header with Refresh button
-- Page routing with **React Router**
-- Beautiful icons using **react-icons**
-- Fetching real API data using a custom hook (`useFetch`)
-- Displaying posts in card components
-- Reusable Layout component for consistent structure
-- Organized and scalable folder structure
-- Fully deployed on Vercel
+
+- Robot Fleet Dashboard
+- Robot selection and details view
+- Shared settings using Context API
+- Dynamic page titles with React Router
+- Reports page with robot statistics
+- Custom Hooks for reusable business logic
+- Reusable RobotCard and RobotDetails components
+- Responsive layout
+- Sidebar navigation with active state
+- Separation of UI and logic
 
 ---
 
 ## 🧱 **Tech Stack**
 - React (JavaScript)
+- Context API
+- Custom Hooks
 - React Router
 - React Icons
 - CSS (modular component styles)
@@ -38,9 +51,10 @@ A simple and clean dashboard built with **React**, **Custom Hooks**, **Routing**
 ```text
 src/
 ├── components/
-│   ├── Sidebar.jsx
 │   ├── Header.jsx
-│   └── Card.jsx
+│   ├── Sidebar.jsx
+│   ├── RobotCard.jsx
+│   └── RobotDetails.jsx
 │
 ├── pages/
 │   ├── Dashboard.jsx
@@ -48,16 +62,19 @@ src/
 │   └── Settings.jsx
 │
 ├── hooks/
-│   └── useFetch.js
+│   ├── useFetch.js
+│   └── useRobotStats.js
 │
-├── styles/
-│   ├── Card.css
-│   ├── Dashboard.css
-│   ├── Header.css
-│   └── Sidebar.css
+├── context/
+│   └── DashboardSettingsContext.jsx
+│
+├── data/
+│   └── robots.js
 │
 ├── layout/
 │   └── Layout.jsx
+│
+├── styles/
 │
 ├── App.js
 └── index.js
@@ -71,11 +88,6 @@ cd dashboard
 npm install
 npm start
 ```
----
-
-## 📡 **API Source**
-Data fetched from:
-[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
 
 ---
 
