@@ -1,5 +1,5 @@
 
-# ** Robot Fleet Dashboard — React**
+# Robot Fleet Dashboard — React
 
 A simple and clean dashboard built with **React**, **Custom Hooks**, **Routing**, and a fully responsive UI. A robotics-oriented fleet dashboard built with React. The project demonstrates component architecture, custom hooks, context API, routing, shared state management, and reusable UI patterns commonly used in enterprise applications.
 
